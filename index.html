@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA4 Setup Project</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <h1>Welcome to GA4 Setup Project</h1>
+  <button onclick="trackSignup()">Sign Up</button>
+
+  <script>
+    function trackSignup() {
+      gtag('event', 'sign_up', {
+        'event_category': 'engagement',
+        'event_label': 'Sign Up Button'
+      });
+    }
+  </script>
+</body>
+</html>
